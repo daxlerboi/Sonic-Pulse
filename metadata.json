@@ -1,0 +1,6 @@
+{
+  "name": "SonicPulse",
+  "description": "Professional BPM and Key detector for musicians and DJs. Upload any song to instantly analyze its tempo and musical scale with high-precision waveform visualization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
