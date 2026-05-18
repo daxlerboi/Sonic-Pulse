@@ -1,5 +1,3 @@
-Here is a suggested **README.md** for the **Sonic-Pulse** repository, based on the file structure and project description found in the sources.
-
 ***
 
 # Sonic-Pulse
