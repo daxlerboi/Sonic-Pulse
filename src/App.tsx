@@ -63,7 +63,7 @@ export default function App() {
           <div className="w-8 h-8 bg-gradient-to-tr from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
             <div className="w-4 h-4 bg-black rounded-sm rotate-45" />
           </div>
-          <span className="text-xl font-black tracking-tighter uppercase">Sonar.AI</span>
+          <span className="text-xl font-black tracking-tighter uppercase">SonicPulse</span>
         </div>
         <div className="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase">
           <span className="text-cyan-400">Analyzer</span>
@@ -87,7 +87,7 @@ export default function App() {
             >
               <div className="text-center mb-12">
                 <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">
-                  Precision Sonar
+                  Sonic Pulse
                 </h1>
                 <p className="text-white/40 uppercase tracking-[0.3em] text-sm">Computational Music Analysis</p>
               </div>
