@@ -2,7 +2,13 @@
 
 Sonic Pulse is a browser-based audio analysis tool that detects BPM (Beats Per Minute) and musical key from audio files.
 
-I originally built this project because I wanted a simple and fast way to analyze tracks directly in the browser without opening heavy desktop software every time. The goal is to make workflow easier for producers, DJs, remix artists, and anyone working with music.
+I built this project because I wanted a fast and simple way to analyze tracks directly in the browser without needing heavy desktop software every time. The goal is to make workflow easier for producers, DJs, remix artists, and anyone working with music.
+
+---
+
+## Live Demo
+
+https://sonicpulse.daxlerboi.workers.dev/
 
 ---
 
@@ -82,10 +88,13 @@ Planned features include:
 
 Made by DAXLERBOI (@daxler_boi)
 
-I'm an independent creator working on music, AI projects, web apps, and creative tech experiments.
+Independent creator working on music, AI projects, web apps, and creative technology.
 
 GitHub:
 https://github.com/daxlerboi
+
+Website:
+https://sonicpulse.daxlerboi.workers.dev/
 
 ---
 
