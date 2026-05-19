@@ -1,47 +1,94 @@
-***
+# Sonic Pulse
 
-# Sonic-Pulse
+Sonic Pulse is a browser-based audio analysis tool that detects BPM (Beats Per Minute) and musical key from audio files.
 
-**Sonic-Pulse** is a web-based tool designed to accurately detect the **BPM (Beats Per Minute)** and **musical key** of audio files. Built with a modern tech stack, it provides a streamlined interface for musicians, DJs, and producers to analyze their tracks.
+I originally built this project because I wanted a simple and fast way to analyze tracks directly in the browser without opening heavy desktop software every time. The goal is to make workflow easier for producers, DJs, remix artists, and anyone working with music.
 
-## 🚀 Features
-*   **BPM Detection:** Automatically calculates the tempo of your audio tracks.
-*   **Key Detection:** Identifies the musical key of the uploaded audio.
-*   **Fast Analysis:** Powered by TypeScript for a performant and reliable experience.
+---
 
-## 🛠️ Tech Stack
-*   **Language:** TypeScript (96.8%)
-*   **Bundler:** Vite
-*   **Frontend:** HTML5 & CSS3
+## Features
 
-## 📦 Installation
+- BPM detection
+- Musical key detection
+- Fast browser-based processing
+- Simple and clean UI
+- Upload and analyze audio files instantly
 
-To get a local copy up and running, follow these simple steps:
+---
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/daxlerboi/Sonic-Pulse.git
-    ```
-2.  **Navigate to the project directory:**
-    ```bash
-    cd Sonic-Pulse
-    ```
-3.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+## Tech Stack
 
-## ⚙️ Configuration
-The project includes an `.env.example` file. To configure your environment:
-1.  Copy `.env.example` to a new file named `.env`.
-2.  Fill in any necessary environment variables as defined in the file.
+- TypeScript
+- React
+- Vite
+- HTML5
+- CSS3
+- Web Audio API
 
-## 📖 Usage
-To start the development server:
+---
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/daxlerboi/Sonic-Pulse.git
+```
+
+Go into the project folder:
+
+```bash
+cd Sonic-Pulse
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
 ```bash
 npm run dev
 ```
-Once the server is running, open your browser to the local URL provided by Vite (usually `http://localhost:5173`) to begin analyzing your audio files.
 
-## 🤝 Contributors
-*   **daxlerboi** (Project Owner)
+After running the command, open the local Vite URL shown in the terminal.
+
+---
+
+## Environment Setup
+
+An `.env.example` file is included.
+
+Create a `.env` file and add the required environment variables if needed.
+
+---
+
+## Current Status
+
+Still actively being developed and improved.
+
+Planned features include:
+- Better BPM accuracy
+- Waveform visualization
+- Drag and drop uploads
+- AI-assisted audio analysis
+- Improved mobile support
+
+---
+
+## Creator
+
+Made by DAXLERBOI (@daxler_boi)
+
+I'm an independent creator working on music, AI projects, web apps, and creative tech experiments.
+
+GitHub:
+https://github.com/daxlerboi
+
+---
+
+## Contributing
+
+Suggestions, ideas, and feedback are always welcome.
