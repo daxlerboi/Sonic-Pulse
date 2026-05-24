@@ -1,57 +1,77 @@
 # Sonic Pulse
 
-Sonic Pulse is a browser-based audio analysis tool that detects BPM (Beats Per Minute) and musical key from audio files.
+[![TypeScript](https://img.shields.io/badge/TypeScript-used-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-used-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-used-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Web Audio API](https://img.shields.io/badge/Web_Audio_API-used-FF6A00)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+[![Browser](https://img.shields.io/badge/Browser-supported-0078D4)](https://www.google.com/chrome/)
 
-I built this project because I wanted a fast and simple way to analyze tracks key and bpm directly in the browser without needing heavy desktop software every time. The goal is to make workflow easier for producers, DJs, remix artists, and anyone working with music.
+Built by `daxler_boi`
 
----
+Sonic Pulse is a browser-based audio analysis app that detects BPM and musical key from uploaded audio files.
+It is built for producers, DJs, remix artists, and anyone who wants a fast local-style analysis workflow without opening heavy desktop software.
 
-## Live Demo
-
+Live demo:
 https://sonicpulse.daxlerboi.workers.dev/
 
----
+## What It Does
 
-## Features
+- uploads and analyzes audio files in the browser
+- detects BPM using `web-audio-beat-detector`
+- detects musical key and scale with a custom chroma-based analyzer
+- shows a waveform player for the loaded track
+- keeps the interface clean, dark, and focused on the result
+- supports common audio inputs such as `mp3`, `wav`, `flac`, and `m4a`
 
-- BPM detection
-- Musical key detection
-- Fast browser-based processing
-- Simple and clean UI
-- Upload and analyze audio files instantly
+## How It Is Built
 
----
+Sonic Pulse is a small React + Vite app with a lightweight audio-analysis pipeline.
 
-## Tech Stack
+The flow looks like this:
 
-- TypeScript
-- React
-- Vite
-- HTML5
-- CSS3
-- Web Audio API
+1. `UploadZone` accepts an audio file with `react-dropzone`.
+2. `App.tsx` reads the file into an `AudioBuffer` using the Web Audio API.
+3. BPM is detected with `web-audio-beat-detector`.
+4. Musical key is detected in `src/lib/audioUtils.ts` using chroma-style analysis.
+5. `WaveformDisplay` renders the waveform and playback controls with `wavesurfer.js`.
+6. `motion` handles the animated transitions and polished UI movement.
 
----
+The app is intentionally browser-first:
+- no backend is required for the core analysis flow
+- the analysis runs locally in the page
+- the UI updates immediately when a track is loaded
 
-## Getting Started
+## Code Walkthrough
 
-Clone the repository:
+The main logic lives in `src/App.tsx`.
 
-```bash
-git clone https://github.com/daxlerboi/Sonic-Pulse.git
-```
+- `handleFileSelect()` validates the file, decodes the audio, runs BPM and key detection, and stores the result.
+- `reset()` clears the loaded track so a new file can be analyzed.
+- The main layout switches between the upload screen and the analysis screen.
+- The results panel shows BPM, key, scale, waveform, file name, and track metadata.
 
-Go into the project folder:
+Supporting pieces:
 
-```bash
-cd Sonic-Pulse
-```
+- `src/components/UploadZone.tsx` handles drag-and-drop and click-to-upload.
+- `src/components/WaveformDisplay.tsx` renders the waveform and playback controls.
+- `src/lib/audioUtils.ts` performs the key-detection analysis.
+- `src/lib/utils.ts` provides small utility helpers like `cn()`.
 
-Install dependencies:
+## Requirements
+
+- Node.js
+- npm
+- a modern browser with Web Audio API support
+
+## Install
+
+From the project folder:
 
 ```bash
 npm install
 ```
+
+## Run
 
 Start the development server:
 
@@ -59,45 +79,56 @@ Start the development server:
 npm run dev
 ```
 
-After running the command, open the local Vite URL shown in the terminal.
+Open the local Vite URL shown in the terminal, usually:
 
----
+```text
+http://localhost:3000
+```
 
-## Environment Setup
+## Commands
 
-An `.env.example` file is included.
+### Development
 
-Create a `.env` file and add the required environment variables if needed.
+```bash
+npm run dev
+```
 
----
+### Production build
 
-## Current Status
+```bash
+npm run build
+```
 
-Still actively being developed and improved.
+### Preview the build
 
-Planned features include:
-- Better BPM accuracy
-- Waveform visualization
-- Drag and drop uploads
-- AI-assisted audio analysis
-- Improved mobile support
+```bash
+npm run preview
+```
 
----
+### Type check
 
-## Creator
+```bash
+npm run lint
+```
 
-Made by DAXLERBOI (@daxler_boi)
+## Output
 
-Independent creator working on music, AI projects, web apps, and creative technology.
+The app does not generate files by default.
+It analyzes the uploaded track in the browser and displays:
 
-GitHub:
-https://github.com/daxlerboi
+- BPM
+- musical key
+- scale
+- waveform playback view
+- file name and size metadata
 
-Website:
-https://sonicpulse.daxlerboi.workers.dev/
+## Notes
 
----
+- Analysis happens in the browser, so performance depends on the device and the length of the audio file.
+- The first file decode can take a moment on larger tracks.
+- The current UI is intentionally dark and minimal, with the result cards keeping focus on the analysis.
+- The project is still easy to extend with features like export, better confidence scoring, waveform annotations, or a library view.
 
-## Contributing
+## Author
 
-Suggestions, ideas, and feedback are always welcome.
+Created and maintained by `daxler_boi`.
